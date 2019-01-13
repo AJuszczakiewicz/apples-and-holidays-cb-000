@@ -71,8 +71,12 @@ end
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
+  hol_hash = {}
   bbq_holidays = Array.new
-  puts holiday_hash.values.flatten
+  holiday_hash.values.each do |holiday|
+    hol_hash.merge!(holiday)
+  end
+    hol_hash
 end
 
 # hol =
