@@ -74,13 +74,12 @@ def all_holidays_with_bbq(holiday_hash)
   bbq_holidays = Array.new
   holiday_hash.values.each do |holiday|
     binding.pry
-    if holiday.values.include?("BBQ")
-      binding.pry
+    if holiday.values.flatten.include?("BBQ")
       bbq_holidays << holiday.key
     end
   end
   binding.pry
-  bbq_holidays
+
 end
 
 hol =
