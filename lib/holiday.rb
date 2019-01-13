@@ -73,13 +73,8 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   hol_hash = {}
   bbq_holidays = Array.new
-  holiday_hash.values.each do |holiday|
-    hol_hash.merge!(holiday)
-  end
-  hol_hash.each do |key, value|
-    if value.include?("BBQ")
-      bbq_holidays << key
-    end
+  holiday_hash.values.each {|holiday| hol_hash.merge!(holiday)}
+  hol_hash.each{|key, value| bbq_holidays << key if value.include?("BBQ")}
   end
   bbq_holidays
 end
