@@ -73,30 +73,27 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   bbq_holidays = Array.new
   holiday_hash.values.each do |holiday|
-    binding.pry
     if holiday.values.flatten.include?("BBQ")
       bbq_holidays << holiday.key
     end
   end
-  binding.pry
-
 end
 
-hol =
-{
-  :winter => {
-    :christmas => ["Lights", "Wreath"],
-    :new_years => ["Party Hats"]
-  },
-  :summer => {
-    :fourth_of_july => ["Fireworks", "BBQ"]
-  },
-  :fall => {
-    :thanksgiving => ["Turkey"]
-  },
-  :spring => {
-    :memorial_day => ["BBQ"]
-  }
-}
-
-all_holidays_with_bbq(hol)
+# hol =
+# {
+#   :winter => {
+#     :christmas => ["Lights", "Wreath"],
+#     :new_years => ["Party Hats"]
+#   },
+#   :summer => {
+#     :fourth_of_july => ["Fireworks", "BBQ"]
+#   },
+#   :fall => {
+#     :thanksgiving => ["Turkey"]
+#   },
+#   :spring => {
+#     :memorial_day => ["BBQ"]
+#   }
+# }
+# 
+# all_holidays_with_bbq(hol)
