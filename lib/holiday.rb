@@ -95,5 +95,5 @@ end
 #     :memorial_day => ["BBQ"]
 #   }
 # }
-# 
+#
 # all_holidays_with_bbq(hol)
