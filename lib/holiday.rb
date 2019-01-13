@@ -76,7 +76,7 @@ def all_holidays_with_bbq(holiday_hash)
   holiday_hash.values.each do |holiday|
     hol_hash.merge!(holiday)
   end
-  hol_hash.each |key, value|
+  hol_hash.each do |key, value|
     if value.include?("BBQ")
       bbq_holidays << key
     end
