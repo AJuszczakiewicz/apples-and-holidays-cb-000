@@ -75,7 +75,6 @@ def all_holidays_with_bbq(holiday_hash)
   bbq_holidays = Array.new
   holiday_hash.values.each {|holiday| hol_hash.merge!(holiday)}
   hol_hash.each{|key, value| bbq_holidays << key if value.include?("BBQ")}
-  end
   bbq_holidays
 end
 
